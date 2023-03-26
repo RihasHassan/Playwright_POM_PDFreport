@@ -1,0 +1,20 @@
+Test case 1:
+1. Load home page https://www.vangoghmuseum.nl
+2. Go to the collection search by clicking in the link -> Ontdek de collectie
+3. Verify that you get the collection page using your own verification criterion.
+
+Test case 2:
+1. Load the collection search page https://www.vangoghmuseum.nl/nl/collectie
+2. Search the painting with title “Het Gele Huis” from the search box.
+3. Verify that you get more than 700 results
+
+
+Test case 3:
+1. Load the collection search page https://www.vangoghmuseum.nl/nl/collectie
+2. Search the painting with title “Het Gele Huis” from the search box.
+3. Click on the first result
+4. Verify that you get this painting:
+   In order to make the verification compare these data in Objectgegevens section:
+F-nummer:
+JH-nummer:
+Inventarisnummer:

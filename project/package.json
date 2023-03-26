@@ -1,0 +1,17 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.32.1"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "pdfkit": "^0.13.0"
+  }
+}
