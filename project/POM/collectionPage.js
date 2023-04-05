@@ -23,8 +23,10 @@ export class collectiePage{
 
     async cookieAlert()
     {
-
+       if(await this.cookieAlert_locator){
         await this.cookieAlert_locator.click()
+       }
+        
     }
     async searchWithItem(searchingItem)    
     

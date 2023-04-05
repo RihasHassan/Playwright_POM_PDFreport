@@ -173,7 +173,7 @@ for (let i = 0; i < testResults.length; i++) {
       });
 
       // save the buffer to a file
-      fs.writeFileSync('./LatesttestResults.pdf', Buffer.concat(buffer));
+      fs.writeFileSync('./AutomationReport.pdf', Buffer.concat(buffer));
 
       console.log('PDF report generated successfully.');
     } catch (error) {

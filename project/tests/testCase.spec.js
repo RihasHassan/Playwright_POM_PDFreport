@@ -44,6 +44,7 @@ test.afterEach(async ({},testInfo) => {
 test('Verify that user Go to the collection search by clicking in the link -> Ontdek de collectie', async () => {
 
   await page.goto('/');
+  await collectiePageobj.cookieAlert()
   await homePageObj.clickOnLink('Ontdek de collectie')
   await page.url().includes('collectie') //verifying that user is on collectie page or not 
 
@@ -52,6 +53,7 @@ test('Verify that user Go to the collection search by clicking in the link -> On
 test('Verify that search reult for Het Gele Huis is more than 700 results',async()=>{
 
   await page.goto('/nl/collectie')
+  await collectiePageobj.cookieAlert()
   await collectiePageobj.searchWithItem(expectedDataJson.SearchingItem)
   let count =await collectiePageobj.searchResultCount()
   expect(count).toBeGreaterThan(700)
