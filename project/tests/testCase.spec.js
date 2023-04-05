@@ -7,7 +7,7 @@ const{homePage}=require('../POM/homePage')
 const expectedDataJson=require('../ExpectedData.json')
 
 
-test.describe('`Test case `suite',()=>{
+test.describe('Test case suite',()=>{
 
 let page
 let context
@@ -28,6 +28,19 @@ collectiePageobj=new collectiePage(page)
 })
 
 
+test.afterEach(async ({},testInfo) => {
+
+  let result = testInfo.status
+  let testName = testInfo.title
+  testName = testName.replace(/[^a-zA-Z0-9]/g, '');
+
+  if (result === 'failed' || result === 'passed') {
+      
+  const screenshot = await page.screenshot({path: './screenshots/'+testName+'.png',fullPage: true });
+  }
+   await page.waitForTimeout(1000)
+
+})
 test('Verify that user Go to the collection search by clicking in the link -> Ontdek de collectie', async () => {
 
   await page.goto('/');

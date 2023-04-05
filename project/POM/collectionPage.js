@@ -7,7 +7,7 @@ export class collectiePage{
 
         this.page=page
     
-
+    this.cookieAlert_locator=this.page.locator('//button[contains(@class,"cookie-banner-button") and contains(text(),"Akkoord")]')
     this.searchField_locator=this.page.locator('.search-field-input')
     this.searchButton_locator=this.page.locator('button[type="submit"]')
     this.searchResultCount_Locator=this.page.locator('.results')
@@ -24,8 +24,7 @@ export class collectiePage{
     async cookieAlert()
     {
 
-        await this.page.locator('//button[contains(@class,"cookie-banner-button") and contains(text(),"Akkoord")]')
-        .click()
+        await this.cookieAlert_locator.click()
     }
     async searchWithItem(searchingItem)    
     
